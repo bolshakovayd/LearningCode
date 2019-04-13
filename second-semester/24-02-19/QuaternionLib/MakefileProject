@@ -1,0 +1,7 @@
+all: QuaternionProj clean
+
+QuaternionProj:
+	g++ -c src/main.cpp
+	g++ -o QuaternionProj src/main.cpp -L. -l:QuaternionLib.so
+clean:
+	rm -rf *.o

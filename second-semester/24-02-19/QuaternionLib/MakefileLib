@@ -1,0 +1,7 @@
+all: QuaternionLib clean
+
+QuaternionLib:
+	g++ -c -fPIC src/QuaternionLib.cpp
+	g++ -shared -o QuaternionLib.so QuaternionLib.o
+clean:
+	rm -rf QuaternionLib *.o
